@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlatformDirectInput : BaseInput
 {
     Keyboard keyboard;
-
+	
 	private void Start()
 	{
 		keyboard = Keyboard.current;
@@ -19,6 +20,10 @@ public class PlatformDirectInput : BaseInput
 		if(keyboard.dKey.isPressed)
 		{
 			dir += Vector3.right;
+		}
+		if (keyboard.spaceKey.wasPressedThisFrame&&canJump)
+		{
+			_jumpEvent?.Invoke();
 		}
 	}
 }
