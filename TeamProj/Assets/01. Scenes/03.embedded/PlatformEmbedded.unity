@@ -1253,7 +1253,6 @@ GameObject:
   - component: {fileID: 904642528}
   - component: {fileID: 904642527}
   - component: {fileID: 904642530}
-  - component: {fileID: 904642532}
   - component: {fileID: 904642531}
   m_Layer: 0
   m_Name: Player
@@ -1363,7 +1362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7515abb4111d71f44a9c833546e72671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
 --- !u!114 &904642531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,57 +1372,61 @@ MonoBehaviour:
   m_GameObject: {fileID: 904642525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dedeeb08cac241e4f8886aeea853f263, type: 3}
+  m_Script: {fileID: 11500000, guid: 675df27171bb4984789a5ff1ca4335b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {x: 0, y: 0, z: 0}
   canJump: 0
---- !u!114 &904642532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904642525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: a7f84224f3d67384a92c83859d8509cb, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b9b28d9c-7a62-4c68-b457-852918ce39e1
-    m_ActionName: 'Player/Move[/Keyboard/a,/Keyboard/d]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cbeb5241-534e-4bc5-81d4-6d82733515e3
-    m_ActionName: 'Player/Jump[/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6fafec58-0876-41eb-b689-8d35fa2ac3a9
-    m_ActionName: 'Player/Look[/Mouse/position/x]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 322c2ee3-5a0c-4dd9-a4ef-d958bf89c24d
-    m_ActionName: Player/Dash
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 5edf895c-b2f4-4481-a6b3-7f38fa9a3a05
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: fcdd801f-22cb-4d6b-b525-29ae7e7ab94b
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: d4811b16-6b7a-4923-a63c-2b54a6f42f05
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 942b0676-b4f6-4649-8d7f-a86cfb24dd73
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
+  jumpAction:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 80314359-926f-4e4d-bbc4-2eeb7627c140
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 24d14123-cb0b-439d-a87b-67c349f6c13d
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Jump
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &1250108214
 GameObject:
   m_ObjectHideFlags: 0

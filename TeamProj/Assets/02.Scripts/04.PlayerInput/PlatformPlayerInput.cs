@@ -9,6 +9,7 @@ public class PlatformPlayerInput : BaseInput
 	InputActionMap playerMap;
 	InputAction moveAction;
 	InputAction jumpAction;
+	InputAction dashAction;
 	private void Awake()
 	{
         pI = GetComponent<PlayerInput>();
@@ -18,10 +19,15 @@ public class PlatformPlayerInput : BaseInput
 		pI.actions.FindActionMap("Player");
 		moveAction = pI.actions.FindAction("Move");
 		jumpAction = pI.actions.FindAction("Jump");
+		dashAction = pI.actions.FindAction("Dash");
 
 		moveAction.performed += OnMove;
-		moveAction.started += OnJump;
+		jumpAction.started += OnJump;
+		jumpAction.started += (InputAction.CallbackContext value)=> { Debug.Log("started!"); };
+		jumpAction.performed+= (InputAction.CallbackContext value)=> { Debug.Log("performed!"); };
+		jumpAction.canceled += (InputAction.CallbackContext value)=> { Debug.Log("cancled!"); };
 		moveAction.canceled += StopMove;
+		dashAction.performed += Ondash;
 	}
 	private void OnDisable()
 	{
@@ -38,6 +44,10 @@ public class PlatformPlayerInput : BaseInput
 	public void StopMove(InputAction.CallbackContext value)
 	{
 		dir.x = 0;
+	}
+	public void Ondash(InputAction.CallbackContext value)
+	{
+		Debug.Log("대쉬 발동!");
 	}
 
 }
