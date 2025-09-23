@@ -29,6 +29,8 @@ public class PlatformMovement : BaseMovement
 	}
 	void Jump()
 	{
+		if (!input.canJump)
+			return;
 		input.canJump = false;
 		rb2d.AddForce(Vector2.up* 4, ForceMode2D.Impulse);
 	}

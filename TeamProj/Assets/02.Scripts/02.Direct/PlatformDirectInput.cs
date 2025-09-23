@@ -21,7 +21,7 @@ public class PlatformDirectInput : BaseInput
 		{
 			dir += Vector3.right;
 		}
-		if (keyboard.spaceKey.wasPressedThisFrame&&canJump)
+		if (keyboard.spaceKey.wasPressedThisFrame)
 		{
 			_jumpEvent?.Invoke();
 		}
