@@ -28,6 +28,7 @@ public class PlatformPlayerInput : BaseInput
 		jumpAction.canceled += (InputAction.CallbackContext value)=> { Debug.Log("cancled!"); };
 		moveAction.canceled += StopMove;
 		dashAction.performed += Ondash;
+		
 	}
 	private void OnDisable()
 	{
