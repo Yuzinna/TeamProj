@@ -2,15 +2,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using Unity.Cinemachine;
-public class CamRotate : Base3DInput
+using System.Collections.Generic;
+public class CamRotate : Base3DInput, Unity.Cinemachine.IInputAxisOwner
 {
 	public CinemachinePanTilt pantilt;
 	private InputActionReference lookAction;
-	private float sensitivity;
 
-	[SerializeField] private float minTilt = -80f;
-	[SerializeField] private float maxTilt = 80f;
-	public float rotspeed = 200f;
+	
 
 	float mx = 0;
 	float my = 0;
@@ -31,13 +29,10 @@ public class CamRotate : Base3DInput
 	// Update is called once per frame
 	void Update()
     {
-		pantilt.PanAxis.Value += look.x * sensitivity;
+	 }
 
-		pantilt.TiltAxis.Value -= look.y * sensitivity;
-		pantilt.TiltAxis.Value = Mathf.Clamp(pantilt.TiltAxis.Value, minTilt, maxTilt);
-    }
-	
-	
-
-
+	public void GetInputAxes(List<IInputAxisOwner.AxisDescriptor> axes)
+	{
+		throw new System.NotImplementedException();
+	}
 }
