@@ -1,0 +1,16 @@
+using UnityEngine;
+
+public class Base3DInput : BaseInput
+{
+	[Header("Character Input Values")]
+	public Vector2 move { get { return dir; } set { dir = value; } }
+	public Vector2 look;
+	public bool jump;
+	public bool sprint;
+
+	public bool analogMovement;
+	public bool cursorLocked = true;
+	public bool cursorInputForLook = true;
+
+
+}
