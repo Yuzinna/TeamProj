@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Base3DInput : BaseInput
 {
 	[Header("Character Input Values")]
 	public Vector2 move { get { return dir; } set { dir = value; } }
 	public Vector2 look;
+	public Vector2 screenMousePos;
+	public Mouse CurrentMouse;
 	public bool jump;
 	public bool sprint;
 

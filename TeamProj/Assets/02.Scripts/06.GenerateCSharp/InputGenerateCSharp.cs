@@ -5,13 +5,13 @@ using UnityEngine.InputSystem;
 public class InputGenerateCSharp : Base3DInput
 {
 
-    _3DControl input;
+    public _3DControl input;
 	private bool isPlaying;
 
 	private void Awake()
 	{
 		input = new _3DControl();
-		
+		CurrentMouse = Mouse.current;
 		
 	}
 
@@ -33,6 +33,7 @@ public class InputGenerateCSharp : Base3DInput
 
 		input.Changer.Change.started += OnChange;
 		input.Changer.Enable();
+		
 		
 	}
 
@@ -85,4 +86,5 @@ public class InputGenerateCSharp : Base3DInput
 	{
 		sprint = value.performed;
 	}
+	
 }

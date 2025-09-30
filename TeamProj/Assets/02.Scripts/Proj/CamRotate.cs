@@ -7,7 +7,8 @@ using UnityEngine.Windows;
 public class CamRotate : MonoBehaviour
 {
 	_3DControl _3DControl;
-	Base3DInput _input;
+	InputManager inputManager;
+	//Base3DInput _input;
 	private const float _threshold = 0.01f;
 
 	[Header("Cinemachine")]
@@ -39,26 +40,27 @@ public class CamRotate : MonoBehaviour
 	public bool LockCameraPosition = false;
 	private void Awake()
 	{
-		_input = GetComponent<Base3DInput>();
+		//_input = GetComponent<Base3DInput>();
+		inputManager = InputManager.Instance;
 	}
 	private void CameraRotation()
 	{
 		
 		// if there is an input and camera position is not fixed
-		if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
+		if (inputManager.input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
 		{
 			//Don't multiply mouse input by Time.deltaTime;
 			float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-			_cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
-			_cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
+			_cinemachineTargetYaw += inputManager.input.look.x * deltaTimeMultiplier;
+			_cinemachineTargetPitch += inputManager.input.look.y * deltaTimeMultiplier;
 		}
 
 		// clamp our rotations so our values are limited 360 degrees
 		_cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
 		_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
 
-		// Cinemachine will follow this target
+		// 타겟을 따라가는 시네머신 카메라
 		CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
 			_cinemachineTargetYaw, 0.0f);
 	}
