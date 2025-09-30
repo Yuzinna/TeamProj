@@ -11,7 +11,6 @@ public class PlayerClick : MonoBehaviour
 
 	Vector2 mousepos;
 
-	Vector3 mousePosWorld;
 	Ray ray;
 	private void Start()
 	{
