@@ -6,11 +6,10 @@ using System.Collections.Generic;
 using UnityEngine.Windows;
 public class CamRotate : MonoBehaviour
 {
-	_3DControl _3DControl;
-	InputManager inputManager;
+	public InputManager inputManager;
 	//Base3DInput _input;
 	private const float _threshold = 0.01f;
-
+	public  PlayerCtrl pctrl;
 	[Header("Cinemachine")]
 	[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 	public GameObject CinemachineCameraTarget;
@@ -38,8 +37,12 @@ public class CamRotate : MonoBehaviour
 	public float TopClamp = 70.0f;
 
 	public bool LockCameraPosition = false;
-	private void Awake()
+	private void Start()
 	{
+		Vector3 initialAngles = CinemachineCameraTarget.transform.rotation.eulerAngles;
+		_cinemachineTargetYaw = initialAngles.y;
+		_cinemachineTargetPitch = initialAngles.x;
+
 		//_input = GetComponent<Base3DInput>();
 		inputManager = InputManager.Instance;
 	}
@@ -47,17 +50,17 @@ public class CamRotate : MonoBehaviour
 	{
 		
 		// if there is an input and camera position is not fixed
-		if (inputManager.input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
+		if (pctrl.look.sqrMagnitude >= _threshold && !LockCameraPosition)
 		{
 			//Don't multiply mouse input by Time.deltaTime;
 			float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-			_cinemachineTargetYaw += inputManager.input.look.x * deltaTimeMultiplier;
-			_cinemachineTargetPitch += inputManager.input.look.y * deltaTimeMultiplier;
+			_cinemachineTargetYaw += pctrl.look.x * deltaTimeMultiplier;
+			_cinemachineTargetPitch += pctrl.look.y * deltaTimeMultiplier;
 		}
 
 		// clamp our rotations so our values are limited 360 degrees
-		_cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
+		_cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, -100f, 100f);
 		_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
 
 		// 타겟을 따라가는 시네머신 카메라

@@ -1,0 +1,123 @@
+{
+    "version": 1,
+    "name": "ProjControl",
+    "maps": [
+        {
+            "name": "CameraCtrl",
+            "id": "f5cda447-5ea0-4a3f-92a3-7226eb72be19",
+            "actions": [
+                {
+                    "name": "CameraRot",
+                    "type": "Value",
+                    "id": "9fd00fb6-eae8-45d4-9809-aa8826a181a4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "cb4beaef-31d3-4c19-b9f6-f1215819e219",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MousePos",
+                    "type": "Value",
+                    "id": "2e308eb0-3cf5-4213-a0d7-a49c28c700fc",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b7f2154f-db17-4c45-8a11-9569cfb7b177",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1905acd3-01cd-4d63-8d7e-7156a18b88be",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false)",
+                    "groups": "",
+                    "action": "CameraRot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "afe32736-0a27-4874-9a43-d11739e94e27",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Dialogue",
+            "id": "111a82ee-bbf5-4af8-bae7-aae8c5fedcd7",
+            "actions": [
+                {
+                    "name": "Next",
+                    "type": "Button",
+                    "id": "45b0b689-b0d1-4996-9889-a55be327f6fb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Prev",
+                    "type": "Button",
+                    "id": "603a1ed3-de8c-4a44-9f98-39e40d0b257b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f73c9bdc-bc97-426a-b369-f8c41c21a25b",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31556dc1-df21-4140-b18d-baa2e87e665e",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Prev",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

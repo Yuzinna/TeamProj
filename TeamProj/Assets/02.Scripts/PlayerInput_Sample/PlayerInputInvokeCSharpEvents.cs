@@ -1,22 +1,30 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInputInvokeCSharpEvents : Base3DInput
+public class PlayerInputInvokeCSharpEvents : MonoBehaviour
 {
+    [Header("Character Input Values")]
+    public Vector2 move;
+    public Vector2 look;
+    public bool jump;
+    public bool sprint;
+
+    public bool analogMovement;
+    public bool cursorLocked = true;
+    public bool cursorInputForLook = true;
+
     public PlayerInput PlayerInput;
     private InputActionMap playerMap;
     private InputActionMap carMap;
     private InputActionMap changerMap;
 
-    private bool isPlaying;
+    private bool onDrive;
         
     private InputAction moveAction;
     private InputAction lookAction;
     private InputAction jumpAction;
     private InputAction sprintAction;
 
-    public Canvas ui;
     private void Awake()
     {
         PlayerInput = GetComponent<PlayerInput>();
@@ -56,26 +64,17 @@ public class PlayerInputInvokeCSharpEvents : Base3DInput
 
     public void OnChange(InputAction.CallbackContext value)
     {
-        isPlaying = !isPlaying;
-        if (!isPlaying)
+        onDrive = !onDrive;
+        if (onDrive)
         {
-            PlayerInput.SwitchCurrentActionMap("UI");
-            ui.gameObject.SetActive(true);
-            StartCoroutine(NextFrame());
-            
+            PlayerInput.SwitchCurrentActionMap("Car");
         }
         else
         {
             PlayerInput.SwitchCurrentActionMap("Player");
-            ui.gameObject.SetActive(false);
-			Time.timeScale = 1;
-		}
+        }
     }
-    IEnumerator NextFrame()
-    {
-        yield return null;
-        Time.timeScale = 0;
-    }
+
     public void OnMove(InputAction.CallbackContext value)
     {
         move = value.ReadValue<Vector2>();

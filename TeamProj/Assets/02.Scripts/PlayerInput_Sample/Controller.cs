@@ -93,7 +93,7 @@ public class Controller : MonoBehaviour
 #endif
     private Animator _animator;
     private CharacterController _controller;
-    private Base3DInput _input;
+    private PlayerInputInvokeCSharpEvents _input;
     private GameObject _mainCamera;
 
     private const float _threshold = 0.01f;
@@ -120,7 +120,7 @@ public class Controller : MonoBehaviour
         {
             _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         }
-        _input = GetComponent<Base3DInput>();
+        _input = GetComponent<PlayerInputInvokeCSharpEvents>();
     }
 
     private void Start()
@@ -129,7 +129,7 @@ public class Controller : MonoBehaviour
 
         _hasAnimator = TryGetComponent(out _animator);
         _controller = GetComponent<CharacterController>();
-        _input = GetComponent<Base3DInput>();
+        _input = GetComponent<PlayerInputInvokeCSharpEvents>();
 #if ENABLE_INPUT_SYSTEM
         _playerInput = GetComponent<PlayerInput>();
 #else
