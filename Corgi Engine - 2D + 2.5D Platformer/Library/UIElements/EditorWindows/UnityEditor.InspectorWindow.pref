@@ -1,0 +1,649 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12386, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.UIElements.SerializableJsonDictionary
+  m_Keys:
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3D-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3D-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3D-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3D-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3D-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3D-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3D-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    SettingsFoldout__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    SettingsFoldout__DeathFeedbacks- SettingsFoldoutInitialization__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    SettingsFoldout__DeathFeedbacks- SettingsFoldoutDirection__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    SettingsFoldout__DeathFeedbacks- SettingsFoldoutIntensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    SettingsFoldout__DeathFeedbacks- SettingsFoldoutTiming__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    SettingsFoldout__DeathFeedbacks- SettingsFoldoutRange__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    SettingsFoldout__DeathFeedbacks- SettingsFoldoutPlaySettings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    feedbacksListContainer__DeathFeedbacks- feedbacksListView__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    feedbacksListContainer__DeathFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    feedbacksListContainer__DeathFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    feedbacksListContainer__DeathFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__DeathFeedbacks-1685636892__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    SettingsFoldout__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    SettingsFoldout__DamageFeedbacks- SettingsFoldoutInitialization__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    SettingsFoldout__DamageFeedbacks- SettingsFoldoutDirection__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    SettingsFoldout__DamageFeedbacks- SettingsFoldoutIntensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    SettingsFoldout__DamageFeedbacks- SettingsFoldoutTiming__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    SettingsFoldout__DamageFeedbacks- SettingsFoldoutRange__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    SettingsFoldout__DamageFeedbacks- SettingsFoldoutPlaySettings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    feedbacksListContainer__DamageFeedbacks- feedbacksListView__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    feedbacksListContainer__DamageFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    feedbacksListContainer__DamageFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    feedbacksListContainer__DamageFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__DamageFeedbacks--743007462__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedbacks-
+    feedbacksListContainer__DamageFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__DamageFeedbacks-1194648383__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMBloomShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMBloomShakerBloom
+    Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMBloomShakerBloom
+    Threshold__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMChromaticAberrationShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMChromaticAberrationShakerChromatic
+    Aberration Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMColorGradingShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMColorGradingShakerPost
+    Exposure__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMColorGradingShakerHue
+    Shift__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMColorGradingShakerSaturation__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMColorGradingShakerContrast__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMLensDistortionShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMLensDistortionShakerLens
+    Distortion Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMVignetteShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMVignetteShakerVignette
+    Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMVignetteShakerVignette
+    Color__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMDepthOfFieldShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMDepthOfFieldShakerFocus
+    Distance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMDepthOfFieldShakerAperture__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Corgi3DPostProcessingVolume-MMDepthOfFieldShakerFocal
+    Length__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-HealthBars__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-HealthBars__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-HealthBars__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-JetPackBars__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-JetPackBars__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-JetPackBars__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-AmmoDisplays__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-AmmoDisplays__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-AmmoDisplays__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterRequirements__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterActivation
+    Conditions__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterNumber
+    of Activations__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterInput__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterAnimation__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterVisual
+    Prompt__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterFeedbacks__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterActions__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterTeleporter__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterDestination__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterRooms__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterMMFader
+    Transition__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterMask__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterStates__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterTeleport
+    Sequence__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__OrangeVortex-TeleporterTeleport
+    Sequence Feedbacks__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkBlink
+    Method__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkExtra
+    Targets__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkExtra
+    Targets__unity-list-ExtraRenderers__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkExtra
+    Targets__unity-list-ExtraRenderers__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkExtra
+    Targets__unity-list-ExtraRenderers__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkState__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkTimeScale__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkSequence__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkDebug__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkExtra
+    Targets__unity-list-ExtraGameObjects__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkExtra
+    Targets__unity-list-ExtraGameObjects__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkExtra
+    Targets__unity-list-ExtraGameObjects__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkSequence__unity-list-Phases__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkSequence__unity-list-Phases__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Model-MMBlinkSequence__unity-list-Phases__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-brobro-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-brobro-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-brobro-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-brobro-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-brobro-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-brobro-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-brobro-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__NativeSpineCorgi-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__NativeSpineCorgi-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__NativeSpineCorgi-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__NativeSpineCorgi-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__NativeSpineCorgi-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__NativeSpineCorgi-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__NativeSpineCorgi-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__PixelCorgi-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__PixelCorgi-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__PixelCorgi-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__PixelCorgi-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__PixelCorgi-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__PixelCorgi-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__PixelCorgi-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-TypedDamages__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-TypedDamages__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-TypedDamages__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__redRobot-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__redRobot-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__redRobot-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__redRobot-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__redRobot-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__redRobot-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__redRobot-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-AssociatedCheckpoints__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-AssociatedCheckpoints__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-AssociatedCheckpoints__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__cannonball-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__cannonball-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__cannonball-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__cannonball-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__cannonball-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__cannonball-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__cannonball-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedbacks-
+    feedbacksListContainer__DeathFeedbacks- feedbacksListView__unity-vertical-collection-scroll-view__DeathFeedbacks-571889349__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Blob-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Blob-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Blob-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Blob-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Blob-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Blob-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__Blob-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-corgi-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-corgi-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-corgi-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-corgi-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-corgi-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-corgi-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-corgi-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-pig-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-pig-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-pig-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-pig-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-pig-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-pig-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-pig-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponGeneral
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponBurst
+    Mode__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponMagazine__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponPosition__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponHands
+    Positions__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponMovement__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponAnimation__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponAnimation__unity-list-Animators__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponAnimation__unity-list-Animators__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponAnimation__unity-list-Animators__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponAnimation
+    Parameters Names__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponFeedbacks__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponRecoil__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGun-ProjectileWeaponProjectile
+    Spawn__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponGeneral
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponBurst
+    Mode__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponMagazine__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponPosition__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponHands
+    Positions__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponMovement__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponAnimation__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponAnimation__unity-list-Animators__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponAnimation__unity-list-Animators__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponAnimation__unity-list-Animators__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponAnimation
+    Parameters Names__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponFeedbacks__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponRecoil__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__CorgiSpineMachineGunBouncy-ProjectileWeaponProjectile
+    Spawn__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-cat-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-cat-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-cat-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-cat-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-cat-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-cat-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-cat-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-chicken-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-chicken-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-chicken-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-chicken-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-chicken-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-chicken-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__spine-space-chicken-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-PooledGameObjects__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-PooledGameObjects__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-PooledGameObjects__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMBloomShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMBloomShakerBloom
+    Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMBloomShakerBloom
+    Threshold__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMChromaticAberrationShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMChromaticAberrationShakerChromatic
+    Aberration Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMColorGradingShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMColorGradingShakerPost
+    Exposure__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMColorGradingShakerHue
+    Shift__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMColorGradingShakerSaturation__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMColorGradingShakerContrast__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMLensDistortionShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMLensDistortionShakerLens
+    Distortion Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMVignetteShakerShaker
+    Settings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMVignetteShakerVignette
+    Intensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroPostProcessingVolume-MMVignetteShakerVignette
+    Color__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-SpriteCollection__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-SpriteCollection__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-SpriteCollection__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTiles-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTiles-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTiles-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTiles-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTiles-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTiles-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTiles-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTilesTop-HealthStatus__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTilesTop-HealthHealth__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTilesTop-HealthDamage__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTilesTop-HealthKnockback__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTilesTop-HealthDeath__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTilesTop-HealthDeath
+    Forces__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__BrobroTilesTop-HealthShared
+    Health and Damage Resistance__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__m_ScriptableObjects__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__m_ScriptableObjects__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__m_ScriptableObjects__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    SettingsFoldout__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    SettingsFoldout__DamageFeedback- SettingsFoldoutInitialization__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    SettingsFoldout__DamageFeedback- SettingsFoldoutDirection__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    SettingsFoldout__DamageFeedback- SettingsFoldoutIntensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    SettingsFoldout__DamageFeedback- SettingsFoldoutTiming__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    SettingsFoldout__DamageFeedback- SettingsFoldoutRange__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    SettingsFoldout__DamageFeedback- SettingsFoldoutPlaySettings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    feedbacksListContainer__DamageFeedback- feedbacksListView__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    feedbacksListContainer__DamageFeedback- feedbacksListView__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    feedbacksListContainer__DamageFeedback- feedbacksListView__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    feedbacksListContainer__DamageFeedback- feedbacksListView__unity-vertical-collection-scroll-view__DamageFeedback--590157269__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DamageFeedback-
+    feedbacksListContainer__DamageFeedback- feedbacksListView__unity-vertical-collection-scroll-view__DamageFeedback-1232685948__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    SettingsFoldout__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    SettingsFoldout__DeathFeedback- SettingsFoldoutInitialization__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    SettingsFoldout__DeathFeedback- SettingsFoldoutDirection__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    SettingsFoldout__DeathFeedback- SettingsFoldoutIntensity__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    SettingsFoldout__DeathFeedback- SettingsFoldoutTiming__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    SettingsFoldout__DeathFeedback- SettingsFoldoutRange__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    SettingsFoldout__DeathFeedback- SettingsFoldoutPlaySettings__UnityEngine.UIElements.Foldout
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    feedbacksListContainer__DeathFeedback- feedbacksListView__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    feedbacksListContainer__DeathFeedback- feedbacksListView__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__DeathFeedback-
+    feedbacksListContainer__DeathFeedback- feedbacksListView__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  m_Values:
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_SelectedIds":[]}'
+  - '{"m_ScrollOffset":{"x":0.0,"y":0.0}}'
+  - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":2147483648.0}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_SelectedIds":[]}'
+  - '{"m_ScrollOffset":{"x":0.0,"y":0.0}}'
+  - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":2147483648.0}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_Value":true}'
+  - '{"m_ShowAlternatingRowBackgrounds":1,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_SelectedIds":[]}'
+  - '{"m_ScrollOffset":{"x":0.0,"y":0.0}}'
+  - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":2147483648.0}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":43.199981689453128,"anchoredItemIndex":0,"anchorOffset":0.0},"m_SelectedIds":[]}'
+  - '{"m_ScrollOffset":{"x":0.0,"y":0.0}}'
+  - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":0.0}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":-1,"anchorOffset":0.0},"m_SelectedIds":[]}'
+  - '{"m_ScrollOffset":{"x":0.0,"y":0.0}}'
+  - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":0.0}'
