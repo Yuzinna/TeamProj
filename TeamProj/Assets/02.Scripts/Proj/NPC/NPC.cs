@@ -1,8 +1,134 @@
+using UnityEngine;
+using DG.Tweening; // DOTween ë„¤ì„ìŠ¤í˜ì´ìŠ¤ ì¶”ê°€
+
+/// <summary>
+/// DOTweenì„ ì‚¬ìš©í•˜ì—¬ NPCì˜ ì´ë™ ë° ìƒíƒœë¥¼ ê´€ë¦¬í•©ë‹ˆë‹¤.
+/// </summary>
+public class NPC : MonoBehaviour
+{
+	// NPCì˜ ì •ë³´ (ì´ë¦„, êµ­ì  ë“±)
+	public NpcData npcData;
+
+	// ì´ë™í•  ëª©í‘œ ì§€ì ë“¤ (Unity ì—ë””í„°ì—ì„œ í• ë‹¹)
+	public Transform deskPosition;
+	public Transform exitPosition;
+	public Transform rejectedPosition; // ê±°ì ˆ ì‹œ ì´ë™í•  ìœ„ì¹˜
+
+	// ì´ë™ ì†ë„
+	public float moveSpeed = 2.0f;
+
+	// NPCì˜ í˜„ì¬ ìƒíƒœ
+	public enum State
+	{
+		Waiting,      // ìƒì„± í›„ ëŒ€ê¸°
+		MovingToDesk, // ì±…ìƒìœ¼ë¡œ ì´ë™ ì¤‘
+		AtDesk,       // ì±…ìƒì— ë„ì°©í•˜ì—¬ ì‹¬ì‚¬ ëŒ€ê¸°
+		Approved,     // ìŠ¹ì¸ë¨
+		Rejected      // ê±°ì ˆë¨
+	}
+	public State currentState;
+
+	void Start()
+	{
+		currentState = State.Waiting;
+		if (npcData != null)
+		{
+			gameObject.name = $"NPC_{npcData.npcName}";
+		}
+	}
+
+	/// <summary>
+	/// NPCë¥¼ ì‹¬ì‚¬ëŒ€ë¡œ ì´ë™ì‹œí‚µë‹ˆë‹¤.
+	/// </summary>
+	public void GoToDesk()
+	{
+		if (deskPosition == null)
+		{
+			Debug.LogError("Desk Positionì´ í• ë‹¹ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤!");
+			return;
+		}
+
+		currentState = State.MovingToDesk;
+		float distance = Vector3.Distance(transform.position, deskPosition.position);
+		float duration = distance / moveSpeed;
+
+		// DOMoveë¥¼ ì‚¬ìš©í•˜ì—¬ ëª©í‘œ ì§€ì ê¹Œì§€ ì´ë™í•˜ê³ , ë„ì°©í•˜ë©´ ìƒíƒœë¥¼ ë³€ê²½í•©ë‹ˆë‹¤.
+		transform.DOMove(deskPosition.position, duration)
+			.SetEase(Ease.Linear) // ì¼ì •í•œ ì†ë„ë¡œ ì´ë™
+			.OnComplete(() =>
+			{
+				currentState = State.AtDesk;
+				Debug.Log($"{gameObject.name}ì´(ê°€) ì‹¬ì‚¬ëŒ€ì— ë„ì°©í–ˆìŠµë‹ˆë‹¤.");
+				// ì—¬ê¸°ì— ë„ì°© í›„ ë°©í–¥ì„ ë°”ë¼ë³´ê²Œ í•˜ëŠ” ì½”ë“œ ì¶”ê°€ ê°€ëŠ¥
+				// transform.DORotate(deskPosition.rotation.eulerAngles, 0.5f);
+			});
+	}
+
+	/// <summary>
+	/// ì‹¬ì‚¬ ê²°ê³¼ë¥¼ ì²˜ë¦¬í•˜ê³ , ê²°ê³¼ì— ë”°ë¼ ì´ë™ì‹œí‚µë‹ˆë‹¤.
+	/// </summary>
+	public void ProcessDecision(bool isApproved)
+	{
+		if (isApproved)
+		{
+			GoToExit();
+		}
+		else
+		{
+			GoToRejected();
+		}
+	}
+
+	private void GoToExit()
+	{
+		if (exitPosition == null)
+		{
+			Debug.LogError("Exit Positionì´ í• ë‹¹ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤!");
+			return;
+		}
+
+		currentState = State.Approved;
+		float distance = Vector3.Distance(transform.position, exitPosition.position);
+		float duration = distance / moveSpeed;
+
+		transform.DOMove(exitPosition.position, duration)
+			.SetEase(Ease.Linear)
+			.OnComplete(() =>
+			{
+				Debug.Log($"{gameObject.name}ì´(ê°€) í‡´ì¥í–ˆìŠµë‹ˆë‹¤.");
+				Destroy(gameObject); // í‡´ì¥ í›„ ì˜¤ë¸Œì íŠ¸ íŒŒê´´
+			});
+	}
+
+	private void GoToRejected()
+	{
+		if (rejectedPosition == null)
+		{
+			Debug.LogError("Rejected Positionì´ í• ë‹¹ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤!");
+			return;
+		}
+		currentState = State.Rejected;
+		float distance = Vector3.Distance(transform.position, rejectedPosition.position);
+		float duration = distance / moveSpeed;
+
+		transform.DOMove(rejectedPosition.position, duration)
+			.SetEase(Ease.Linear)
+			.OnComplete(() =>
+			{
+				Debug.Log($"{gameObject.name}ì´(ê°€) ê±°ì ˆë˜ì–´ í‡´ì¥í–ˆìŠµë‹ˆë‹¤.");
+				Destroy(gameObject); // í‡´ì¥ í›„ ì˜¤ë¸Œì íŠ¸ íŒŒê´´
+			});
+	}
+}
+
+/*
+// [OLD CODE - Spline Version]
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Splines;
-public enum eNpcState { Idle, WalkToDesk, WalkToEnter, WalkToExit,WalkWithPolice }//npc°¡ ÇÒ¼öÀÖ´Â Çàµ¿
-public enum eSubmit {Passport,Luggage,None }//npc°¡ Á¦ÃâÇÒ ¿ÀºêÁ§Æ®
+public enum eNpcState { Idle, WalkToDesk, WalkToEnter, WalkToExit,WalkWithPolice }//npcê°€ ê°€ì§ˆìˆ˜ìˆëŠ” í–‰ë™
+public enum eSubmit {Passport,Luggage,None }//npcê°€ ì œì¶œí•  ì•„ì´í…œ
 
 public class NPC : BaseEntity
 {
@@ -14,23 +140,23 @@ public class NPC : BaseEntity
     public SplineAnimate splineAnimate;
 	public SplineContainer curSpline;
     public Animator anim;
-	public GameObject passportPrefab;//¼Õ¿¡»ı¼ºÇÒ ¿©±Ç
-	public GameObject luggagePrefab;//¼Õ¿¡»ı¼ºÇÒ ¼öÇÏ¹°
+	public GameObject passportPrefab;//ì†ì— ë“¤ê³ ìˆì„ ì—¬ê¶Œ
+	public GameObject luggagePrefab;//ì†ì— ë“¤ê³ ìˆì„ ìˆ˜í•˜ë¬¼
 	
-	public GameObject heldPassport;//ÁøÂ¥ ¼Õ¿¡ »ı¼ºÇÑ ¿©±Ç
-	public GameObject heldLuggage;//ÁøÂ¥ ¼Õ¿¡»ı¼ºÇÑ ¼öÇÏ¹°
+	public GameObject heldPassport;//í˜„ì¬ ë“¤ê³ ìˆëŠ” ì—¬ê¶Œ ì˜¤ë¸Œì íŠ¸
+	public GameObject heldLuggage;//í˜„ì¬ ë“¤ê³ ìˆëŠ” ìˆ˜í•˜ë¬¼ ì˜¤ë¸Œì íŠ¸
 
-	public GameObject passportUsePrefab;//»ç¿ëÇÒ ¿©±Ç
-	public GameObject LuggageUsePrefab;//»ç¿ëÇÒ ¼öÇÏ¹°
+	public GameObject passportUsePrefab;//í”Œë ˆì´ì–´ê°€ ì‚¬ìš©í•  ì—¬ê¶Œ
+	public GameObject LuggageUsePrefab;//í”Œë ˆì´ì–´ê°€ ì‚¬ìš©í•  ìˆ˜í•˜ë¬¼
 
 	
 
 	public bool isBlocked = false;
 	public bool isFinSpline = false;
 
-	public bool isSubmit = false;//Á¦ÃâÇØ¾ßÇÏ´Â »óÅÂÀÎ°¡
-	public bool wasSubmitPassport = false;//¿©±ÇÀ» Á¦ÃâÇß´Â°¡
-	public bool wasSubmitLuggage = false;//¼öÇÏ¹°À» Á¦ÃâÇß´Â°¡
+	public bool isSubmit = false;//ì œì¶œí•´ì•¼í•˜ëŠ” ìƒíƒœì¸ê°€
+	public bool wasSubmitPassport = false;//ì—¬ê¶Œì„ ì œì¶œí–ˆëŠ”ê°€
+	public bool wasSubmitLuggage = false;//ìˆ˜í•˜ë¬¼ì„ ì œì¶œí–ˆëŠ”ê°€
 	public eSubmit curSubmit = eSubmit.None;
 	#region Passport Transform prop
 	public Vector3 passportPositionOffset;
@@ -132,12 +258,12 @@ public class NPC : BaseEntity
     }
 	private void OnTriggerEnter(Collider other)
 	{
-		//¾Õ»ç¶÷°úÀÇ Ãæµ¹Ã¼Å©
-		//Ãæµ¹ÇÑ npcÀÇ id
-		if (other.CompareTag("Npc"))//ÀÏ´Ü Ãæµ¹ÇÑ°Ô npc¿©¾ß¸¸ ÇÏ°í
+		//ë’·ì‚¬ëŒê³¼ì˜ ì¶©ëŒì²´í¬
+		//ì¶©ëŒí•œ npcì˜ id
+		if (other.CompareTag("Npc"))//ë‹¤ë¥¸ ì¶©ëŒí•œê²Œ npcë¼ë©´ ì¼ë‹¨
 		{
-			int otherNpcId = other.gameObject.GetComponent<NPC>().Id;//Ãæµ¹ÇÑ npcÀÇ id
-			if (Id>otherNpcId)//³» id°¡ »ó´ëº¸´Ù ´õ Å©¸é? Ãæµ¹ÇÑ°Ç ¾Õ»ç¶÷
+			int otherNpcId = other.gameObject.GetComponent<NPC>().Id;//ì¶©ëŒí•œ npcì˜ id
+			if (Id>otherNpcId)//ë‚´ idê°€ ì¶©ëŒí•œ ì• ë³´ë‹¤ ë” í¬ë©´? ì¶©ëŒí•œ ì• ê°€ ë’·ì‚¬ëŒ
 			{
 				isBlocked = true;
 			}
@@ -147,12 +273,12 @@ public class NPC : BaseEntity
 	}
 	private void OnTriggerExit(Collider other)
 	{
-		//¾Õ»ç¶÷°úÀÇ Ãæµ¹Ã¼Å©
-		//Ãæµ¹ÇÑ npcÀÇ id
-		if (other.CompareTag("Npc"))//ÀÏ´Ü Ãæµ¹ÇÑ°Ô npc¿©¾ß¸¸ ÇÏ°í
+		//ë’·ì‚¬ëŒê³¼ì˜ ì¶©ëŒì²´í¬
+		//ì¶©ëŒí•œ npcì˜ id
+		if (other.CompareTag("Npc"))//ë‹¤ë¥¸ ì¶©ëŒí•œê²Œ npcë¼ë©´ ì¼ë‹¨
 		{
-			int otherNpcId = other.gameObject.GetComponent<NPC>().Id;//Ãæµ¹ÇÑ npcÀÇ id
-			if (Id > otherNpcId)//³» id°¡ »ó´ëº¸´Ù ´õ Å©¸é? Ãæµ¹ÇÑ°Ç ¾Õ»ç¶÷
+			int otherNpcId = other.gameObject.GetComponent<NPC>().Id;//ì¶©ëŒí•œ npcì˜ id
+			if (Id > otherNpcId)//ë‚´ idê°€ ì¶©ëŒí•œ ì• ë³´ë‹¤ ë” í¬ë©´? ì¶©ëŒí•œ ì• ê°€ ë’·ì‚¬ëŒ
 			{
 				isBlocked = false;
 			}
@@ -162,25 +288,25 @@ public class NPC : BaseEntity
 	#region Passport Transform Function
 	public void AttachPassportToHand()
 	{
-		// Humanoid ¸®±× ±âÁØ
+		// Humanoid ë¼ˆëŒ€ ì°¾ê¸°
 		Transform handBone = anim.GetBoneTransform(HumanBodyBones.RightHand);
 
 		if (handBone == null)
 		{
-			Debug.LogError("¼Õ º»À» Ã£À» ¼ö ¾ø½À´Ï´Ù!");
+			Debug.LogError("ì† ë¼ˆëŒ€ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
 			return;
 		}
 
 		if (heldPassport != null)
 			Destroy(heldPassport);
-		// ÇÁ¸®ÆÕÀ» ¼Õ À§Ä¡¿¡ »ı¼º
+		// ì—¬ê¶Œ í”„ë¦¬íŒ¹ì„ ì† ë¼ˆëŒ€ì˜ ìì‹ìœ¼ë¡œ ìƒì„±
 		heldPassport = Instantiate(passportPrefab, handBone);
 		
-		// ¼ÕÀÇ À§Ä¡¸¦ ±âÁØÀ¸·Î ¿ÀºêÁ§Æ®ÀÇ »ó´ë À§Ä¡ ÃÊ±âÈ­
+		// ê¸°ë³¸ ìœ„ì¹˜ë¥¼ ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸ì— ëŒ€í•œ ë¡œì»¬ ìœ„ì¹˜ë¡œ ì´ˆê¸°í™”
 		heldPassport.transform.localPosition = Vector3.zero;
 		heldPassport.transform.localRotation = Quaternion.identity;
 
-		// ÇÊ¿äÇÏ¸é offset Á¶Á¤ (¿¹: ¼Õ¹Ù´Ú Áß½É º¸Á¤)
+		// í•„ìš”í•˜ë©´ offset ì ìš© (ì˜ˆ: ì—¬ê¶Œì˜ ì¤‘ì‹¬ ë§ì¶”ê¸°)
 		heldPassport.transform.localPosition = new Vector3(0, 0.05f, 0.1f);
 
 		heldPassport.transform.localPosition = passportPositionOffset;
@@ -213,25 +339,25 @@ public class NPC : BaseEntity
 	#endregion
 	public void AttachLuggageToHand()
 	{
-		// Humanoid ¸®±× ±âÁØ
+		// Humanoid ë¼ˆëŒ€ ì°¾ê¸°
 		Transform handBone = anim.GetBoneTransform(HumanBodyBones.RightHand);
 
 		if (handBone == null)
 		{
-			Debug.LogError("¼Õ º»À» Ã£À» ¼ö ¾ø½À´Ï´Ù!");
+			Debug.LogError("ì† ë¼ˆëŒ€ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
 			return;
 		}
 
 		if (heldLuggage != null)
 			Destroy(heldLuggage);
-		// ÇÁ¸®ÆÕÀ» ¼Õ À§Ä¡¿¡ »ı¼º
+		// ìˆ˜í•˜ë¬¼ í”„ë¦¬íŒ¹ì„ ì† ë¼ˆëŒ€ì˜ ìì‹ìœ¼ë¡œ ìƒì„±
 		heldLuggage = Instantiate(luggagePrefab, handBone);
 
-		// ¼ÕÀÇ À§Ä¡¸¦ ±âÁØÀ¸·Î ¿ÀºêÁ§Æ®ÀÇ »ó´ë À§Ä¡ ÃÊ±âÈ­
+		// ê¸°ë³¸ ìœ„ì¹˜ë¥¼ ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸ì— ëŒ€í•œ ë¡œì»¬ ìœ„ì¹˜ë¡œ ì´ˆê¸°í™”
 		heldLuggage.transform.localPosition = Vector3.zero;
 		heldLuggage.transform.localRotation = Quaternion.identity;
 
-		// ÇÊ¿äÇÏ¸é offset Á¶Á¤ (¿¹: ¼Õ¹Ù´Ú Áß½É º¸Á¤)
+		// í•„ìš”í•˜ë©´ offset ì ìš© (ì˜ˆ: ì—¬ê¶Œì˜ ì¤‘ì‹¬ ë§ì¶”ê¸°)
 		heldLuggage.transform.localPosition = new Vector3(0, 0.05f, 0.1f);
 
 		heldLuggage.transform.localPosition = luggagePositionOffset;
@@ -262,3 +388,4 @@ public class NPC : BaseEntity
 
 	}
 }
+*/

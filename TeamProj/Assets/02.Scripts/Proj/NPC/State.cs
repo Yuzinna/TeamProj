@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public abstract class State
 {
-	public eNpcState state = eNpcState.Idle;
+	
 	public string stateName;
 	public abstract void Enter(NPC entity);//Ω√¿€
 
