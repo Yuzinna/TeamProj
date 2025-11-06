@@ -113,7 +113,7 @@ public class RuleManager : MonoBehaviour
 	}
 	private void Start()
 	{
-		curNpc = GameManager.Instance.maxNpcCount;
+		curNpc = 20;
 		displayScoreText();
 	}
 	private void Update()

@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour
 	private void OnDestroy()
 	{
 		// 이벤트 해제
-		InputManager.Instance.input.inputAsset.Dialogue.Disable();
+		//InputManager.Instance.input.inputAsset.Dialogue.Disable();
 	}
 
 	// 대화 시작
