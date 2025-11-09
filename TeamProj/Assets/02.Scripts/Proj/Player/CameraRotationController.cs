@@ -38,8 +38,7 @@ public class CameraRotationController : MonoBehaviour
 
 	private void OnDisable()
 	{
-		UnbindInput();
-		InputManager.OnInputReady -= BindInput;
+		
 	}
 
 	private void StartRotationToWorldY(float worldYAngle)
@@ -94,7 +93,7 @@ public class CameraRotationController : MonoBehaviour
 	{
 		StartRotationToWorldY(0f); // ¾Õ
 	}
-		private void BindInput()
+	private void BindInput()
 	{
 		var input = InputManager.Instance.input.inputAsset.CameraCtrl;
 		input.Enable();
@@ -106,11 +105,6 @@ public class CameraRotationController : MonoBehaviour
 
 	private void UnbindInput()
 	{
-		var input = InputManager.Instance.input.inputAsset.CameraCtrl;
-		input.CameraRotationLeft.performed -= OnCameraRotationLeft;
-		input.CameraRotationRight.performed -= OnCameraRotationRight;
-		input.CameraRotationReset.performed -= OnCameraRotationReset;
-		input.CameraRotationBack.performed -= OnCameraRotationBack;
-		input.Disable();
+		
 	}
 }
